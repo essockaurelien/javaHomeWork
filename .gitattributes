@@ -1,15 +1,9 @@
-
-* linguaggio=Java
-*.html linguaggio=Java
-*.css linguaggio=Java
-*.js linguaggio=Java
-# Forza la rilevazione Java
+# Forza rilevazione Java
 *.java linguaggio=Java
 *.gradle linguaggio=Java
 *.xml linguaggio=Java
 
-# Escludi altri linguaggi dalle statistiche
+# Escludi completamente HTML/CSS/JS dalle statistiche
 *.html linguaggio=Java
 *.css linguaggio=Java
 *.js linguaggio=Java
-
