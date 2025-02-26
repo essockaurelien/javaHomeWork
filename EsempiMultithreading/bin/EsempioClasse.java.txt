@@ -1,0 +1,84 @@
+/*
+ * Usate questo esempio per creare classi nella prima parte del corso.
+ * IMPORTANTE: per acquisire una metodologia "ordinata" nello sviluppo di classi,
+ * copiate anche nelle vostre i commenti per dividere attributi (campi), costruttori e metodi.
+ *
+ */
+
+
+public class EsempioClasse {
+	
+	//******************CAMPI**********************************************************
+	// campi/attributi della classe: DESCRIVONO un oggetto di tipo EsempioClasse.
+	//(esempio)
+	int x;
+	String y;
+	EsempioClasse z;
+	
+	//******************COSTRUTTORI****************************************************
+	// COME posso creare un nuovo oggetto di tipo EsempioClasse: hanno lo stesso nome della classe
+	
+	public EsempioClasse() {
+		x = 9;
+		y = "Ciao";
+		z = null;
+	}
+	
+	public EsempioClasse(String y, EsempioClasse z) {
+		this.x = 0;
+		this.y = y;
+		this.z = z;
+	}
+	
+	//*******************METODI********************************************************
+	/*per ora facciamo esempi di getter e setter di campi.
+	 * Ad ogni modo, la sintassi per dichiarare un metodo e' (per ora) 
+	 * public TIPORITORNO NOMEMETODO(PARAMETRI) {
+	 * 	CORPO DEL METODO
+	 * }
+	 */
+	
+	public int getX() {
+		return this.x;
+	}
+	
+	public void setX(int x) {
+		this.x = x;
+	}
+	
+	public void setZ(EsempioClasse z) {
+		this.z = z;
+	}
+	
+	//*******************MAIN********************************************************
+	//infine create il main con questa intestazione, per avviare il programma
+
+	public static void main(String[] args) {
+		
+		/*Potete creare nuovi oggetti della classe appena definita, semplicemente usando new NOMECLASSE(PARAMETRI);
+		* dove NOMECLASSE è il nome della vostra classe, mentre i parametri sono quelli definiti in uno dei
+		* costruttori (scegliete voi quello che vi serve di volta in volta).
+		*/
+		EsempioClasse o1 = new EsempioClasse();
+		EsempioClasse o2 = new EsempioClasse("Altro", o1);
+		
+		//I metodi si chiamano con la dot notation: OGGETTO.NOMEMETODO(PARAMETRI);
+		o1.setX(18);
+		
+		//Per stampare, usate System.out.println(ELEMENTO);  
+		System.out.println(o1.getX());
+
+	}
+	
+	/*
+	 * PER COMPILARE ED ESEGUIRE:
+	 * 1) COMPILARE: javac nomeclasse.java (o, alternativamente, javac *.java)
+	 * 2) verrà creato un file nomeclasse.class
+	 * 3) ESEGUIRE: (ci deve essere un main nel file nomeclass.java) java nomeclass
+	 * 
+	 * AD ESEMPIO
+	 * 1) javac EsempioClasse.java
+	 * 3) java EsempioClasse
+	 * */
+
+}

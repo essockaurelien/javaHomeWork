@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"codice","l":"Agenda"},{"p":"codice","l":"AgendaException"},{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"codice","l":"Appuntamento"},{"p":"codice","l":"AppuntamentoException"},{"p":"codice","l":"GestoreAgende"},{"p":"codice","l":"GestorException"},{"p":"codice","l":"Main"}];updateSearchResults();

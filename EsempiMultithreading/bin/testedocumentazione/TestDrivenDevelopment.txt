@@ -1,0 +1,29 @@
+Introduzione al Test Driven Development (TDD)
+E' una metodologia per sviluppare moduli software (nel nostro caso classi Java) 
+che consiste nello:
+1. Scrivere TEST (la cui verifica è automatizzata) PRIMA del codice
+2. Usare un Framework di testing (nel nostro caso Junit), che ci dice se i test 
+sono verificati (verde) oppure no (rosso)
+3. Modificare codice in piccoli passi, solo quando necessario (quando rosso)
+
+Il TDD nasce con la tecnica dell'eXtreme Programming (lo vedrete in ingegneria del software)
+
+L'idea principale è di testare le singole unità del software (i metodi), in maniera AUTOMATICA.
+
+Non solo: nel TDD la programmazione deve essere GUIDATA DAI TEST. Prima scrivo il test per
+un metodo, poi testo il metodo e fallisce, poi programmo il metodo con lo scopo di
+SUPERARE IL TEST. Se lo supero continuo, altrimenti correggo.
+Migliora la progettazione: 
+- Piccoli test indipendenti implicano piccoli moduli indipendenti
+- Spinge a creare API, indipendenti dalla interfaccia utente
+
+Aiuta a programmare:
+- il costo maggiore della programmazione è la MANUTENZIONE del codice, non la realizzazione
+- con il tempo si tende a non modificare il codice funzionante, per non creare problemi
+	(ma è SBAGLIATO fare così)
+- il TDD permette di modificare i metodi, sapendo che tutto continuerà a funzionare
+- i test fanno da DOCUMENTAZIONE e DEFINIZIONE DI REQUISITI
+
+Esistono diversi framework per l'unit testing. Noi useremo Junit.
+Proveremo ad implementare una Pila seguendo il TDD. Per questo dovete guardare in parallelo 
+i file Pila.java e TestPila.java.

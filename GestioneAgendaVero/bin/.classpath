@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry excluding="RubricaOggetto/src/|primaRubrica/src/|prepa/src/|IOinJava/|prepaCer/src/|banca/src/|exo2Esame/src/|EsempiMultithreading/src/|masterMind/src/|BeforeAfterTest/src/|RubricaStatica/src/|esame9022023Buffer/src/|esempiPrimi/|esame24022023Rettangolo/src/|varianteInter/src/|EsEspressioniRegolari/src/|primoJava/src/|esame24_2Figura(Cerchio)/src/|RubricaContatto/src/|prepaExicises/src/|GestioneAgendaVero/src/" kind="src" path=""/>
+	<classpathentry kind="src" path="banca/src"/>
+	<classpathentry kind="src" path="BeforeAfterTest/src"/>
+	<classpathentry kind="src" path="esame24_2Figura(Cerchio)/src"/>
+	<classpathentry kind="src" path="esame24022023Rettangolo/src"/>
+	<classpathentry kind="src" path="esame9022023Buffer/src"/>
+	<classpathentry kind="src" path="EsempiMultithreading/src"/>
+	<classpathentry kind="src" path="esempiPrimi"/>
+	<classpathentry kind="src" path="EsEspressioniRegolari/src"/>
+	<classpathentry kind="src" path="exo2Esame/src"/>
+	<classpathentry kind="src" path="GestioneAgendaVero/src"/>
+	<classpathentry kind="src" path="IOinJava"/>
+	<classpathentry kind="src" path="masterMind/src"/>
+	<classpathentry kind="src" path="prepa/src"/>
+	<classpathentry kind="src" path="prepaCer/src"/>
+	<classpathentry kind="src" path="prepaExicises/src"/>
+	<classpathentry kind="src" path="primaRubrica/src"/>
+	<classpathentry kind="src" path="primoJava/src"/>
+	<classpathentry kind="src" path="RubricaContatto/src"/>
+	<classpathentry kind="src" path="RubricaOggetto/src"/>
+	<classpathentry kind="src" path="RubricaStatica/src"/>
+	<classpathentry kind="src" path="varianteInter/src"/>
+	<classpathentry kind="output" path="GestioneAgendaVero/bin"/>
+</classpath>

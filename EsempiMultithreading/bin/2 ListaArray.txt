@@ -1,0 +1,21 @@
+ESERCIZIO 1: costruzione di lista di interi IMPLEMENTATA CON ARRAY
+
+Implementiamo, in Java, una ArrayList. Una ArrayList altro non è che un array a tappo. 
+1) Usando Eclipse (ma seguendo il template di classe disponibile su DIR), dichiarate una classe MyIntegerArrayList nel package upo.collection (prima, create il package upo.collection).
+2) CAMPI: un MyIntegerArrayList deve contenere 
+	- un campo body, di tipo Integer[], che contiene gli elementi inseriti nella lista.
+	- un campo last, di tipo int, che contiene l'indice dell'ultimo elemento inserito in body (se la lista è vuota, last==-1)
+	- una costante statica intera DEFAULT_LENGTH, inizializzata a 3, che indica la grandezza di inizializzazione di una MyIntegerArrayList
+	- una costante statica intera DEFAULT_ENLARGE, inizializzata a 3, che indica di quanto si deve allargare l'array ogni volta che è pieno ed è necessario ingrandirlo per aggiungere un elemento. 
+3) COSTRUTTORI: dichiareremo 1 costruttore, che inizializza la MyIntegerArrayList ad una lista vuota:
+	- body sarà inizializzato ad un array di lunghezza DEFAULT_LENGTH
+	- last a -1
+4) METODI:
+	- add(int i, Integer n): aggiunge l'elemento n in posizione i nella lista.
+	- add: aggiunge un intero, preso come parametro, al fondo della lista. Per implementare questo metodo, richiamate add(int i, Integer n)
+	- addFirst: aggiunge un intero, preso come parametro, in cima alla lista. Per implementare questo metodo, richiamate add(int i, Integer n)
+	- get: prende un parametro i intero e restituisce l'i-esimo elemento della lista (o null se la lista non ha l'i-esimo elmento).
+	- contains: prende un intero come parametro, e restituisce true se la lista contiene quell'intero, false altrimenti.
+	- delete: prende un intero come parametro, e cancella dalla lista la prima occorrenza di quell'intero.
+	- size: restituisce un intero che equivale al numero di elementi contenuti nella lista.
+5) TEST: potete creare un main in MyIntegerArrayList che crei una lista ed esegua su di essa diverse operazioni.

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry excluding="examProjet/prenotazioneAule/lib/src/test/java/|examProjet/src/main/java/|Soluzione proposta Esercizio 1-20220218/|IOinJava/|BeforeAfterTest/src/|EsempiMultithreading/src/|RubricaStatica/src/|esamePraticoExerciziRisolti/src/|examProjet/prenotazioneAule/lib/src/main/java/|src/|EsEspressioniRegolari/src/|esempiPrimi/|EsEccezioni/|examProjet/src/test/java/" kind="src" path=""/>
+	<classpathentry kind="src" path="BeforeAfterTest/src"/>
+	<classpathentry kind="src" path="esamePraticoExerciziRisolti/src"/>
+	<classpathentry kind="src" path="EsEccezioni"/>
+	<classpathentry kind="src" path="EsempiMultithreading/src"/>
+	<classpathentry kind="src" path="esempiPrimi"/>
+	<classpathentry kind="src" path="EsEspressioniRegolari/src"/>
+	<classpathentry kind="src" path="examProjet/prenotazioneAule/lib/src/main/java"/>
+	<classpathentry kind="src" path="examProjet/prenotazioneAule/lib/src/test/java"/>
+	<classpathentry kind="src" path="examProjet/src/main/java"/>
+	<classpathentry kind="src" path="examProjet/src/test/java"/>
+	<classpathentry kind="src" path="IOinJava"/>
+	<classpathentry kind="src" path="RubricaStatica/src"/>
+	<classpathentry kind="src" path="Soluzione proposta Esercizio 1-20220218"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="output" path="EsempiMultithreading/bin"/>
+</classpath>

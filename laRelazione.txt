@@ -1,0 +1,85 @@
+Progetto Java: La Relazione.
+
+Gruppo: Aurelien Essock
+
+Tutto nello rispettare i requisiti del progetto, 
+
+abbiamo:
+
+   la classe Agenda,
+
+- Con i suoi campi Private per renderli unpò più sicuri/accessibili solo attraverso i metodi getter e setter che implementiamo.
+- Ha un costruttore dove dato una stringa ci istanzia un Agenda con nome la stringa passata e un ArrayList vuoto di Appuntamenti.
+- Ha dei metodi private che sono di "Utilità"
+   1. isAlpha : che matcha una stringa di caratteri dell'alfabetto (che sia maiuscolo o miniscolo) 
+   2. insertControl: che fa il controllo del suo Agenda(in realità ci serve perche iterando sul ArrayList di Appuntamenti usiamo i metodi di della classe Appuntamento)        
+- Dei metodi Public per essere chiamate da altre classi 
+   1. Cerca:             il metodo cerca nell'Agenda gli Appuntamenti secondo la dataAppuntamento o il nome della persona con cui si ha l'Appuntamento dato in ingresso
+                         attraverso il metodo isAlpha che riceve la stringa(data/ora) risultano due casi, o la stringa non matcha solo caratteri dell'alfabetto, caso della if.
+                         o è fatta solo di caratteri dell'alfabetto o ancora ne l'uno ne l'altro allora vengono lanciate delle Exception(può essere una data ma non c'è Appuntamento per quella come puo non essere una data o non c'è Appuntamento fissato con quella persona).
+   
+   2. Inserisci:         il metodo inserisce nell'Agenda un nuovo Appuntamento faccendo i controlli di sovrapposizione attraverso la insertControl.  
+                         restituisce True se inserito false altrimenti.
+   
+   3. agendaFileReader:  che legge gli Appuntamenti sul file. Usando il bufferReader che prende il file con un ciclo while legge ogni riga del buffer e costruisce 
+                         un Appuntamento Splittando la riga secondo il parametro che inserisce nell'ArrayList appuntamenti del del Agenda su cui chiamato.poi se dati presi sul file o control per add non vanno bene lancia e cattura le Exception.  
+   
+   4. agendaFileReader: come la fileReader attraverso il buffer scriviamo i dati relativi ad Appuntamenti su file.
+   
+   5. modificaAppunt:   a lui passato l'Appuntamento da modificare e tutti i dati relativi allo stesso Appuntamento(nuovo valore se da cambiare) 
+                        se ne forma un nuovo Appuntamenti con i dati presi in input tranne l'Appuntamentostesso(primo parametro)
+                        e se ne controlli la sovrapposizione prima di inserire il nuovo Appuntamento e togliere il vecchio.In questo modo settiamo tutto l'Appuntamento.
+
+   6. Iterator:         per poter iterare sulle Agende. ci restituisce un Iteratore.
+
+   7. ordina:           con la sua classe AppuntamentoComparator permetteva di specificare la logica di confronto in modo separato 
+                        dalla classe principale. che istanziata ci dava un Comparator, con il suo metodo compar fa il confronto tra due Appuntamenti
+                        per data poi per ora se le date sono uguale. per poi passare il comparator alla Collections sort.                  
+ permette di specificare la logica 
+di confronto in modo separato dalla classe principale
+
+
+   la classe Appuntamento,
+- con i suoi campi private 
+- un costruttore dove passati tutti i parametri relativi ad un Appuntamento ci istanzia uno verificando la corettezza dei datiParsificandoli con i suoi metodi private.
+- ha dei metodi private che sono di classe
+  1. parseDate: che mi controllo il formato della data e la sua corettezza (eg. giorni<32) 
+  2. parseOra : controlla l'ora hh:mm (hh<25 && mm<61)
+  3. guardaPerData: controlla se due Appuntamenti sono sovropposti.
+  4. guardaPerOra: controllo sovrapposizione per Ore.
+- i metodi public 
+  1. nonSovrapposto: che controlla che due Appuntamenti non sianno sovrapposti usando i metodi private(di classe) per fare i confronti.
+  
+   la classe GestoreAgende,
+- con suo campo public static cosi viene allocata una solo volta e condivisa tra 
+tutte le istanze della classe.
+- i metodi publici
+  1. AgendaCrea:       passato un nome ci istanzia un gestore di agende con dentro come primo Appuntamento
+                       l Appuntamento con nome quello passato.
+  
+  2. callaAgenda:      prende una stringa e mi cancella nel gestore l'Agenda con quel nome se no niente.
+
+  3. selezionaAgenda:  questa prende una stringa nomeAgenda da cancellare e la cancella nel gestore.
+                       if no present niente.  
+  4. StampaAgenda:     stampa il nome di tutte le agende presente nel gestore suguito ognuno dagli Appuntamenti che contenga anche tutte le informazioni relativi all'Appuntamento.
+
+  5. clear:            l'ArrayList(agende) essendo condiviso tra tutte le istanze della classe essendo static bisogna resettarlo. 
+
+
+Tutte le classi del Progetto sono corelate da classeTest.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

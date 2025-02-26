@@ -1,0 +1,3 @@
+29-05-2023;10:20;30;clienteUno;Vercelli;
+29-07-2023;11:00;30;clienteDue;Torino;
+29-03-2023;10:51;05;clienteTre;Milan;

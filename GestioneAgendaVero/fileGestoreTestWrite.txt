@@ -1,0 +1,1 @@
+Appuntamento [dataAppuntamento=24-03-2023, orarioAppuntamento=20:10, durataAppuntamento=120, nomePersona=manu, nomeLuogoAppuntamento=torino]Appuntamento [dataAppuntamento=24-03-2023, orarioAppuntamento=22:30, durataAppuntamento=90, nomePersona=alpha, nomeLuogoAppuntamento=vercelli]

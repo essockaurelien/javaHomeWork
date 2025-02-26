@@ -1,0 +1,28 @@
+appuntamento 0:
+20-02-2001, 20:30, 30, lorenzo, aula;
+
+
+appuntamento 1:
+25-03-2002, 21:35, 30, luca, ufficio;
+
+
+appuntamento 2:
+24-08-2003, 11:35, 30, andrija, casa;
+
+
+appuntamento 3:
+25-07-2004, 09:35, 30, alessandro, università;
+
+
+appuntamento 4:
+21-03-2010, 07:35, 30, martinanails, nel mio bagno;
+
+
+appuntamento 5:
+22-04-2008, 18:35, 30, marcellofasano, novara;
+
+
+appuntamento 6:
+20-10-2006, 14:35, 30, mipadre, molise;
+
+

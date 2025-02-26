@@ -1,0 +1,7 @@
+20-02-2001;20:30;30;lorenzo;Aula;
+25-03-2002;21:35;30;luca;ufficio;
+24-08-2003;11:35;30;andrija;casa;
+25-07-2004;09:35;30;alessandro;università;
+21-03-2010;07:35;30;martinanails;Nel mio bagno;
+22-04-2008;18:35;30;marcellofasano;novara;
+20-10-2006;14:35;30;mipadre;molise;

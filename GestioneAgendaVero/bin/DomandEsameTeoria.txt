@@ -1,0 +1,406 @@
+1) Modificatori di visibilita’ per variabili e metodi di una classe. 
+Se una variabile/metodo e’ dichiarato: public, private, protected 
+oppure non ha modificatori di visibilita’ dove e’ visibile. 
+Fare un esempio di una porzione di codice corretto e scorretto 
+
+una variabile oun metodo, se ha modificatore :
+  public : è visibile da qualsiasi parte del codice.
+  private: è visibile sono nella classe stessa.
+  protected: è visibile solo nella classe stessa e da eventuale sotto classe.
+  default: allora prende il modificatore di private.  
+
+esempio:
+class Figura{
+  private int x;
+    
+  public Figura(int a){            
+    this.x=a;
+  }
+
+  protected int get(){                public int get(){
+                                        return this.x;
+                                    } // l'accessibilità del campo private viene violato
+    return this.x;
+  } 
+
+  
+}
+
+
+
+****************************************************************************************************************************************************
+2) Differenza fra variabili/metodi statici e di istanza. Fare un esempio. 
+
+la differenza fra viariabili e metodi statica e di istanza è che:
+  le viariabili e metodi statici sono di classe quindi fanno parte della classe
+  mentre quelle di istanza sono di una istanza di quella classe creata tramite la new 
+  eseguendo il costruttore 
+  una viariabile o metodo statico può essere chiamato o utilizzato senza fare una new della classe 
+  quindi non su una istanzia.
+
+public class Punto{
+   static int X;
+  public int Y;
+
+  public Punto(){
+     this.X=1;
+     this.X=1;
+  }
+
+  public int static genX(int a){
+      return this.X=a;
+   }
+
+  public int getY(){
+      return this.x;
+  }
+  
+}
+
+
+public Figura{
+  int z=0;
+  int lato = Punto.genx(z)
+  
+  Punto puntoA = new Punto();
+  lato = puntoA.getY();
+}
+
+
+************************************************************************************************************************************************** 
+3) Differenza fra una classe astratta ed una interfaccia. Quante interfacce
+puo’ implementare una classe? Fare un esempio di classe astratta e uno di
+interfaccia.
+
+la # fra una Astratta ed una interfaccia , la principale è che una classe astratta può contenere 
+che sia metodi implementati che non implementati 
+invece che l'interfaccia ha solo metodi astratti allora non implementati.
+una classe può implementare n interfaccie 
+
+
+abstract class Figura{               interfacce figura{
+                    
+  abstract area();
+  abstract perimetro();
+}
+
+
+public class Quadrato  implement Iterable<>
+    public int l;
+
+   Punto punto = new Punto();
+   
+
+}
+
+
+public Punto{
+  private int X;
+  private int Y
+
+  public Punto(){
+   this.X=1;
+   this.Y=1;
+  }
+}
+
+
+
+*****************************************************************************************************************************************************
+4) Dare alcuni possibili usi delle interfacce. Fare un esempio interfaccia e di 
+una classe che la implementa.
+
+a- Dare comportamenti comuni a classi diverse che altrimenti no avrebbero niente in comune
+  esempio: due classi che implementano Iterable
+b- Dare più comportamenti ad una stessa classe 
+  esempio: una stessa classe che implementa sia Iterable che Comparable
+c- Fornire una gerarchia di ereditarietà diversa; una classe può extendere unasola classe ma implementare più interfaccie
+  
+public class Figura implements Runable{
+
+
+   @Override
+   public run(){
+
+   }
+}
+
+
+*****************************************************************************************************************************************************
+5) Differenza fra una classe ed un oggetto. Cosa e' la metaclasse di una 
+classe?
+
+la # tra classe e Oggetto è che una classe è uno "squeletro" la classe definesce le proprietà(campi)
+e i comportamenti(metodi) che avranno tutte le istanze di quella classe
+invece che un oggtto è un'istanza della classe creata tramite la new eseguendo il costruttore
+
+la metaClasse di una classe è la classe che definisce come può essere creata una classe e come si comporta( è la classe Objects)
+
+
+*****************************************************************************************************************************************************
+6) Cosa e’ un costruttore. Esempio di classe con piu’ di un costruttore. 
+Come avviene la creazione di un oggetto e quando viene eseguito il costruttore
+
+il costruttore è un metodo particolare che viene chiamato quando si crea una nuova istanza di oggetto tramite la new , suo ruolo è di settare le 
+proprietà dell'oggetto appena creato.
+
+public class Punto{
+  private int X;
+  private int Y;
+
+  public Punto(){
+    this.X=1;
+    this.Y=1;
+  }
+
+  public Punto(int a){
+     this.X=a;
+     this.Y=1;
+  }
+}
+
+*****************************************************************************************************************************************************
+7) Che significato hanno le metavariabili this e super in un metodo. 
+
+this : in un metodo chiama l'oggetto su cui il metodo è chiamato(l'oggetto corente)
+super: in un metodo chiama l'oggetto padre (proprietà(campi) e comportamenti(metodi))
+
+*****************************************************************************************************************************************************
+8) Che significato hanno this(....) e super(....) in un costruttore.
+
+in un costruttore :
+  this rappresenta la chiamata a un precedente costruttore (precedentemente dichiarato)
+  super rappresenta la chiamata al costruttore della sovraclasse che viene lui prima esguito.
+
+
+******************************************************************************************************************************************************
+9)Quali sono i tipi primitivi del linguaggio Java (elencarne 4)? Le
+stringhe sono tipi primitivi? Gli array sono primitivi? Quale e' la 
+differenza i fra tipi primitivi e gli altri tipi.
+
+i tipi primitivi di java sono: 
+  int, boolean, long, short, float, byte, char, double.
+le Stringhe e gli Array non sono tipi primitivi ma rappresentazione di dati dello stesso tipo.
+
+La diffeerenza tra tipi primitivi e tipi riferimentoè che:
+  i tipi primitivi come suo nome lo indica 
+ 
+
+
+
+
+******************************************************************************************************************************************************
+10)Cos'e una classe interna? Quali tipi di classe interna si possono 
+avere. Fare un esempio. 
+
+una classe interna è una classe dichiarata all'interno di un'altra.esistono due tipi diverse di classe interne 
+  le classi annidate statiche, sono di classe 
+  le classe annidate non statiche, queste sono dichiarate e istanziate all'interno di un metodo di un'altra classe.
+
+
+******************************************************************************************************************************************************
+11)a) Che cosa e' l'override di metodi. Esiste overrride di costruttori.  
+     
+      l'Override di un metodo è la riscrittura di un metodo di svraclasse da le sue sotto classi
+      
+      No, non esiste l'override dei costruttori.
+
+   b) Che cosa e' l'overlaoding di metodi. Esiste overrride di costruttori. 
+
+      l'Overloading di metodo è la srcittura di uno stesso metodo con diverse chiave dove la chiave sarebbe il numero e i tipi dei parametri in 
+      ingresso; questo in modo che chiaamando quel metodo se inferisce tutti i parametri passati allora chiama quel "istanza" di quel memtodo
+      con quei parametri(numero e tipi)
+     
+      No, non esiste l'overloading dei costruttori.
+    
+
+******************************************************************************************************************************************************
+12) A cosa servono i parametri di tipo e quali costrutti Java possono avere 
+    parametri di tipo. Fare un esempio.
+
+i parametri di tipo o i Tipi generici servono a ennunciare un parametro di tipo il Tipo generico che appartene al costrutto al qualle lo assegniamo
+
+in java i costrutti che posso avere parametro di Tipo sono:
+    - le classi
+    - le interfacce
+    - i metodi
+    - gli stream
+    
+esempio: 
+   public class Figura<Punto> implements Itarable<Punto>{
+     private Punto punto;
+     private float l;
+     
+
+     public Iterato iteraorFigura(){
+        return l;
+     }
+
+   }
+
+******************************************************************************************************************************************************
+
+13) A cosa ci si riferisce quando si parla di polimorfismo di un metodo?
+    Quali forme di polimorfismo si possono avere in Java.
+
+Quando si parla di polimorfismo di un metodo si parla di dellariscrittura di un metodo.
+In java si ha: 
+     l'Override, dove le classi figlie o sottoclassi riscrivono o ridefiniscono i metodi delle sovraclassi (foorma di éreditarietà).
+     l'Overloading, dove le classi scrivono lo stesso metodo piu volte con diversi parametri (tipi e numero)
+
+
+*******************************************************************************************************************************************************
+14) A cosa serve il costrutto try/catch? Fare un esempio 
+
+il costrutto try catch serve per gestire le eccezioni; try o esegui un pezzo di codice (codice nella try) fin che non catturi nessuna eccezione 
+se ne cattura una guarda nell'elenco delle catch se c'è il tippo di quella eccezione se si allora esegui quella catch e return al chiamante altrimenti 
+return al chiamante.
+
+class Main {
+   public void main(args[] arg){
+      try{
+        System.out.println("insert Number");
+          String tmp = Scanner(system.in);
+           Integer.parse.Int(tmp);
+        }catch(NumberFormatException){
+            system.out.println("Non è un intero");q
+          }
+   }
+}
+
+
+*******************************************************************************************************************************************************
+15) Cosa e’ un’eccezione? come si dichiara? come si solleva. Fare un esempio. 
+
+Una eccezione è un'avenuta non voluta.
+Se la dichiara attraverso una classe Nostra eccezione NostraEccezione che extends Exception.
+Se la solleva metendo all'intestazione del metodo o della classe thows NoostraEccezione dicendo cosi che il nostro metodo o la nostra classe 
+può sollevare NostraEccezione.
+
+esempio:
+   public class Figura throws NostraEccezione{
+     int X;
+       public Figura(int a) throws NostraEccezione{
+          if(a<0){
+             this.X=a;
+           }
+        throw NostraEccezione("x è sempre maggiore di zero");
+       }
+   }
+
+******************************************************************************************************************************************************
+16) I metodi e gli attributi di una super-classe sono sempre disponibili 
+    alle sue classi derivate? (motivare la risposta) 
+
+Questo è una proprietà in java; in java, l'eredità consente a tutte le sottoclassi di una classe di vedere tutte le 
+proprietà(campi) e comportamenti(metodi) della sovraclasse loro possono sovrascriverli o ridefinirli ma non possono non averli o renderli meno visibili.
+
+******************************************************************************************************************************************************
+17) Che vantaggi porta l’utilizzo del meccanismo dell’ereditarieta' nella 
+    definizione delle classi ?
+
+l'eredità nella definizione delle classi ci aiuta:
+ - Reusabilità   :  a scrivere meno codice(Override) dove le classi figlie ridefiniscono i metodi della sovraclasse(reusabilità del codice)
+ - Mantenibilità :  del codice dove la modifica di una sovraclasse a effetto in tutte le sue sottoclassi questo ci permette di 
+                    rendere più semplice la manutenzione del codice.
+ - Legibilità    :  tutte le variabili condivise sono dichiarate nella sovraclasse cosi rende il codice più facile da leggere.
+ - Polimorfismo  :  che ci permette di usare oggetti di altre classi come se fossero della nostra classe il che rende il codice più flexibile
+                    e più semplice da estendere.
+ - Encapsulamento:  la superclasse può implementare l'interfaccia publicca che sarà condivisa da tutte le classi figlie , rendendo il codice più modularizzato 
+                    e più facile da gestire.
+
+******************************************************************************************************************************************************
+18) Differenza fra il cast dei tipi primitivi e quello dei tipi riferimento
+
+la # fondamentale tra cast dei tipi primitivi e cast dei tipi riferimento è che: 
+   - il cast dei tipi primitivi effettua una converssione tra valori mentre il cast dei tipi riferimento effettua una converssione tra oggetti all'interno della 
+     gerarchia di eredità.
+   - il cast dei tipi primitivi come l'indica suo nome è un cast tra tipi primitivi che può portare alla perdita di precisione(Arrotondamento)
+     a seconda della conversione.
+ 
+******************************************************************************************************************************************************
+19) Cosa sono le classi wrapper (involucro) e a cosa servono.
+
+Le classi Wrapper sono classi che avvolgono o incapsulano altre classi o tipi di dati primitivi fornendo funzionalità supplementari o modificando il comportamento dei tipi sottostanti.
+Servono a fornire un'interfaccia più conveniente per l'utilizzo dei tipi sottostanti o a 
+Fornire una rappresentazione più specifica di questi tipi in un contesto specifico.
+
+ad esempio:
+la classe Integer è un Wrapper per il tipo primitivo int , che fornisce funzionalità come la conversione da Stringa a int.
+
+*******************************************************************************************************************************************************
+20) Quali sono le differenzer fra Arrays e Oggettidi tipo ArrayList?
+           Considerare le dichiarazioni: a) int array[]; b) ArrayList<Integer> arrayList;
+
+Le pricipale differenze tra array e ArrayList sono:
+
+i) Dimensione: un array ha una fissa che non può essere modificata; mentre la dimenssione di un'ArrayList può essere modificata in base alle esigenze.
+
+ii) Tipi di dati: gli elementi di un array devono essere tutti dello stesso tipo; mentre gli elementi di un ArrayList possono essere diversi.
+
+iii) Prestazione: le prestazioni di un array sono generalmente migliori rispetto a quelle di un ArrayList poichè la memoria è allocata in modo contiguo mentre in un ArrayList, la memiria è allocata dinammicamente.
+
+iV) Sintassi: la sintassi per accedered agli elementi di un array e di un ArrayList è diversa.
+   Nel caso di un array, si usa l'indice, mentre in un ArrayList si usa il metodo get().
+
+insoma se si ha bisogno di una struttura dati che abbia una dimensione fissa e che supporti solo un tipo di dati è più adatto un array, al contrario per le strutture dati di tipi diversi e dinamicamente allocati è più adatta una ArrayList.
+
+*********************************************************************************************************************************************************
+21) Che cos'è un Thread in java? Come si crea un Thread in java? e come gli si assegna delle operazioni da seguire?
+
+Un Thread in java è un processo indipendente all'interno di un'applicazione che può essere eseguito parallellamente ad altri.
+In altre parole, consente di creare programmi che sfruttano almeglio la capacità del sistema di creare più attività contemporaneamente.
+
+In java un Thread si può creare in Quatro(04) modi diversi:
+
+a) Oggetto di tipo MioThread sottoClasse di Thread.
+
+ class MioThead extends Thread{
+   public void run(){
+     //To be implemented
+   }
+} 
+    MioThread tET = new MioThread();
+          tET.start();
+          tET.wait();
+
+Poichè la classe Thread sia di convenienza di java implementa Runnable allora creando una sottoclasse di Thread che lei implementa Runnable devremmo solo definire il metodo run().
+
+b) Oggetti di tipo MioRunnabile che implementa Runnable 
+
+     Thread tER = new Thread(new MioRunnabile());
+
+class MioRunnabile implements Runnable{
+   public void run(){
+     // To be implemented
+   }
+}    
+
+c) Oggetti di una classe Anonima
+  
+   Threead tEA = new Thread(new Runnable(){
+       public run(){
+            //To be implemented
+        }
+          });                                       
+
+d) Una Lambda-expressione che implementi Runnable.
+
+    Thread tEL = new Thread( ()-> {
+          public void run(){
+            // To be implemented
+           }
+        });
+
+************************************************************************************************************************************************************
+22) Date le Condizione di Terminazione di un Thread
+Un tHread termina se:
+  - c'è solo uno Thread in esecuzione, allora termina la JVM normalmente quando termina il programma in esecuzione
+  - ce n'è di più, il Thread principale potrebbe terminare mentre sono ancora in esecuzione altri Thread creati successivamente.
+
+***********************************************************************************************************************************************
+23) Quali sono i meccanismi di sinchronizzazione fra Thread 
+ Synchronized : serve a garantire la mutua esclusione; solo un Thread alla volto sesegue una data parte di codice su un certo dato.
+ wait() and notify() : implementanoun meccanismo di Notifica.
+ wait() : serve a sospendersi in attesa di un certo evento.
+ notify() : serve a segnalare che l'evento si è verificato. 

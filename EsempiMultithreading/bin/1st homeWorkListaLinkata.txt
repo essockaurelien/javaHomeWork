@@ -1,0 +1,30 @@
+ESERCIZIO 1: costruzione di lista di interi
+
+PARTE 1: creazione dell'elemento della lista.
+Come dovreste gia' sapere, una lista linkata (linked list) è uno dei modi di implementare l'Abstract Data Type "lista".
+In una lista linkata, l'elemento principale è il "list element" che contiene 2 elementi: un VALORE (ad esempio, in una lista di interi, un intero) ed un link all'elemento successivo NEXT nella lista (se questo elemento è l'ultimo, il next sara' vuoto o nullo). Il nostro obiettivo è quello di implementare una lista di interi. Partiamo quindi da MyIntegerListElement. 
+1) Usando il template di classe disponibile su DIR, dichiarate una classe MyIntegerListElement.
+2) CAMPI: un MyIntegerListElement deve contenere 
+	- un campo value, di tipo int,
+	- un campo next, di tipo MyIntegerListElement
+3) COSTRUTTORI: dichiareremo 2 costruttori:
+	- uno prende come parametro un int, e setta this.value a quel valore e this.next a null.
+	- l'altro costruttore prende come parametri un int e un MyIntegerListElement, e setta this.value al valore intero e this.next al valore del MyIntegerListElement.
+4) METODI:
+	- getter e setter sia per value che per next (in totale 4 metodi: getValue, setValue, getNext, setNext). I getter (solitamente si usa un nome del tipo getXXX, dove XXX è il nome di un campo) restituiscono il valore di un campo del corrente oggetto. I setter (solitamente si usa un nome del tipo setXXX, dove XXX è il nome di un campo) impostano il valore di un campo ad un valore preso come parametro.
+5) TEST: per sapere se avete fatto le cose correttamente, potete creare un main in questa classe, nel quale create uno o più MyIntegerListElement e richiamate su di essi dei setter. Potete stampare a terminale i risultati dei getter semplicemente col comando System.out.println(XXX); dove XXX può essere il richiamo di un getter (es. System.out.println(el1.getValue());).
+
+PARTE 2: creazione della lista.
+Una lista linkata è solitamente implementata come un puntatore a "list element". Ad oggetti, però, è un vero e proprio oggetto. Dobbiamo quindi definire una classe MyIntegerList.
+1) Usando il template di classe disponibile su DIR, dichiarate una classe MyIntegerList.
+2) CAMPI: un MyIntegerList deve contenere 
+	- un campo head, di tipo MyIntegerListElement
+3) COSTRUTTORI: dichiareremo 1 costruttore, che inizializza head a null.
+4) METODI:
+	- add: aggiunge un intero, preso come parametro, al fondo della lista. Per fare questo crea un nuovo oggetto di tipo MyIntegerListElement e gli assegna l'intero come valore e lo setta come next dell'ultimo elemento della lista.
+	- addFirst: aggiunge un intero, preso come parametro, in cima alla lista. Per fare questo crea un nuovo oggetto di tipo MyIntegerListElement e gli assegna l'intero come valore e l'attuale head come next. Poi, lo setta come head della lista.
+	- get: prende un parametro i intero e restituisce l'i-esimo elemento della lista (per ora, restituite -1 se la lista non ha l'i-esimo elmento).
+	- contains: prende un intero come parametro, e restituisce true se la lista contiene quell'intero, false altrimenti.
+	- delete: prende un intero come parametro, e cancella dalla lista la prima occorrenza di quell'intero.
+	- size: restituisce un intero che equivale al numero di elementi contenuti nella lista.
+5) TEST: come per la classe MyIntegerListElement, potete creare un main in MyIntegerList che crei una lista ed esegua su di essa diverse operazioni.

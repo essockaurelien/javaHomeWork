@@ -1,0 +1,76 @@
+
+Esempio NON esaustivo delle domande di teoria.
+
+
+1) Modificatori di visibilita’ per variabili e metodi di una classe. 
+Se una variabile/metodo e’ dichiarato: public, private, protected 
+oppure non ha modificatori di visibilita’ dove e’ visibile. 
+Fare un esempio di una porzione di codice corretto e scorretto 
+
+2) Differenza fra variabili/metodi statici e di istanza. Fare un esempio.  
+
+3) Differenza fra una classe astratta ed una interfaccia. Quante interfacce
+puo’ implementare una classe? Fare un esempio di classe astratta e uno di
+interfaccia.
+
+4) Dare alcuni possibili usi delle interfacce. Fare un esempio interfaccia e di 
+una classe che la implementa.
+
+5) Differenza fra una classe ed un oggetto. Cosa e' la metaclasse di una 
+classe?
+
+6) Cosa e’ un costruttore. Esempio di classe con piu’ di un costruttore. 
+Come avviene la creazione di un oggetto e quando viene eseguito il costruttore.
+
+7) Che significato hanno le metavariabili this e super in un metodo. 
+
+8) Che significato hanno this(....) e super(....) in un costruttore.
+
+9)Quali sono i tipi primitivi del linguaggio Java (elencarne 4)? Le
+stringhe sono tipi primitivi? Gli array sono primitivi? Quale e' la 
+differenza i fra tipi primitivi e gli altri tipi.
+
+10)Cos'e una classe interna? Quali tipi di classe interna si possono 
+avere. Fare un esempio. 
+
+11)a) Che cosa e' l'override di metodi. Esiste overrride di costruttori.  
+   b) Che cosa e' l'overlaoding di metodi. Esiste overrride di costruttori. 
+
+12) A cosa servono i parametri di tipo e quali costrutti Java possono avere 
+    parametri di tipo. Fare un esempio.
+
+13) A cosa ci si riferisce quando si parla di polimorfismo di un metodo?
+    Quali forme di polimorfismo si possono avere in Java.
+ 
+14) A cosa serve il costrutto try/catch? Fare un esempio 
+
+15) Cosa e’ un’eccezione? come si dichiara? come si solleva. Fare un esempio. 
+
+16) I metodi e gli attributi di una super-classe sono sempre disponibili 
+    alle sue classi derivate? (motivare la risposta) 
+
+17) Che cosa e' l'ereditarieta'. Che vantaggi porta l’utilizzo del meccanismo 
+    dell’ereditarieta' nelladefinizione delle classi ?
+
+18) Differenza fra il cast dei tipi primitivi e quello dei tipi riferimento
+
+19) Cosa sono le classi wrapper (involucro) e a cosa servono.
+
+20) Quali sono le differenze fra arrays e oggetti di tipi ArrayList?
+    Considera ad esempio le seguenti 2 dichiarazioni:
+           int array[];
+           ArrayList<Integer> arrayList
+
+21) Che cosa e' un thread in Java. Come si crea un nuovo thread in Java, e 
+     come gli si assegnano delle operazioni da eseguire?
+    
+22) Quali sono i meccanismi di sincronizzazione fra thread.
+
+23) Come possono 2 thread accedere ad un oggetto condiviso senza interferire
+    fra loro?
+
+24) Cosa fanno i metodi "wait" e "notify" e in quale classe sono definiti?
+
+
+    
+
