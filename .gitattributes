@@ -1,1 +1,15 @@
+
 * linguaggio=Java
+*.html linguaggio=Java
+*.css linguaggio=Java
+*.js linguaggio=Java
+# Forza la rilevazione Java
+*.java linguaggio=Java
+*.gradle linguaggio=Java
+*.xml linguaggio=Java
+
+# Escludi altri linguaggi dalle statistiche
+*.html linguaggio=Java
+*.css linguaggio=Java
+*.js linguaggio=Java
+
